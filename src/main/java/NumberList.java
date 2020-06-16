@@ -4,8 +4,8 @@ public class NumberList {
 
     private ArrayList<Integer> numbers;
 
-    public NumberList(){
-        this.numbers = new ArrayList<Integer>();
+    public NumberList(ArrayList<Integer> numbers){
+        this.numbers = numbers;
     }
 
     public int getNumberCount() {
@@ -19,4 +19,17 @@ public class NumberList {
     public int getNumberAtIndex(int index) {
         return this.numbers.get(index);
     }
+
+    public int getTotal() {
+        int total = 0;
+//        for (int i = 0; i < getNumberCount(); i++){
+//            total += getNumberAtIndex(i);
+//        }
+        for(int number: numbers){
+            total += number;
+        }
+        return total;
+    }
+
+
 }
